@@ -1,0 +1,32 @@
+body {
+
+    background-image: url(1084184.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    margin: 30px;
+}
+
+table {
+
+    background-color:lightskyblue;
+
+}
+
+.card{
+    background-color:lightskyblue;
+
+    margin: 50px;
+}
+
+.card-header {
+
+    background-color:lightskyblue;
+
+}
+
+.card {
+
+    width: 100%;
+
+}
