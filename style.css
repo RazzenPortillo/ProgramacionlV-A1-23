@@ -1,33 +1,32 @@
 body {
 
-    background-image: url(1084184.jpg);
+    background-image: url(fondos/Ina.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     
-    margin: 30px;
+    margin: 0px;
 }
 
 table {
 
-    background-color:lightskyblue;
+    background-color:cadetblue;
 
 }
 
 .card{
-    background-color:lightskyblue;
+    background-color:cadetblue;
 
-    margin: 50px;
+    margin: 70px;
 }
 
 .card-header {
 
-    background-color:lightskyblue;
+    background-color:cadetblue;
 
 }
 
 .card {
 
-    width: 100%;
+    width: 85%;
 
 }
-/*yay*/
