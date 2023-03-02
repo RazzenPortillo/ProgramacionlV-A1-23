@@ -1,32 +1,36 @@
 body {
 
-    background-image: url(fondos/Ina.jpg);
+    background-image: url(Fondos/Clase.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment:fixed ;
     
     margin: 0px;
+    
 }
 
 table {
 
-    background-color:cadetblue;
+    background-color:rgb(87, 116, 134);
 
 }
 
-.card{
-    background-color:cadetblue;
+.card {
+    background-color:rgb(87, 116, 134);
 
     margin: 70px;
+    
+
 }
 
 .card-header {
 
-    background-color:cadetblue;
+    background-color:rgb(87, 116, 134);
 
 }
 
 .card {
 
-    width: 85%;
+    width: 80%;
 
 }
