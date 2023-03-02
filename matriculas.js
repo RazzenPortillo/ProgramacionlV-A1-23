@@ -8,11 +8,12 @@ Vue.component('component-matriculas',{
             alumnos : [],
             matricula:{
                 idMatricula  : '',
-                fecha     : '',
-                pago      : false,
-                alumno    : {
-                    id    : '',
-                    label : ''
+                fecha      : '',
+                pago       : false,
+                comprobante : '',
+                alumno     : {
+                    id     : '',
+                    label  : ''
                 },
             }
         }
@@ -94,6 +95,16 @@ Vue.component('component-matriculas',{
                                 <div class="col-9 col-md-3">
                                     <input v-model="matricula.pago" type="checkbox" class="form-check-input" id="txtPagoMatricula">
                                 </div>
+                                <div class="row p-1">
+                                <div class="col-3 col-md-2">
+                                    <img :src="matricula.comprobante" width="50" height="50">
+                                </div>
+                                <div class="col-9 col-md-10">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                                        <input accept="imagen/*" onChange="seleccionarImagen(this)" type="file" class="form-control" id="inputGroupFile01">
+                                    </div>
+                                </div>
                             </div>
                             <div class="row p-1">
                                 <div class="col-3 col-md-3">
@@ -141,3 +152,19 @@ Vue.component('component-matriculas',{
         </div>
     `
 });
+
+
+async function seleccionarImagen(image){
+    let archivo = image.files[0];
+    if(archivo){
+        let blob = await img(archivo, 1);
+        reader = new FileReader();
+        reader.onload = e=>{
+            app.$refs.matricula.matricula.comprobante = e.target.result;
+            console.log( e.target.result );
+
+        };
+        reader.readAsDataURL(blob);
+
+    }
+}
